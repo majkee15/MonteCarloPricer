@@ -9,13 +9,14 @@
 #define SIMPLEMONTECARLO_H_
 #include "VanillaOption.h"
 #include "Parameters.h"
+#include "StatisticsMC.h"
 class SimpleMonteCarlo {
 public:
 	SimpleMonteCarlo();
 
 	virtual ~SimpleMonteCarlo();
 
-	double SimpleMonteCarlo1(const VanillaOption& TheOption, double Spot, const Parameters& Vol, const Parameters& r, unsigned long NumberOfPaths);
+	double SimpleMonteCarlo1(const VanillaOption& TheOption, double Spot, const Parameters& Vol, const Parameters& r, unsigned long NumberOfPaths, StatisticsMC& gatherer);
 };
 
 #endif /* SIMPLEMONTECARLO_H_ */
