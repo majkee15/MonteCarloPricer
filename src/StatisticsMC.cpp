@@ -31,7 +31,7 @@ void StatisticsMean::DumpOneResult(double result)
 	RunningSum += result;
 }
 
-std::vector<std::vector<double> > StatisticsMean::GetResultSoFar() const
+std::vector<std::vector<double> > StatisticsMean::GetResultsSoFar() const
 {
 	std::vector<std::vector<double> > Results(1);
 	Results[0].resize(1);
@@ -42,7 +42,9 @@ StatisticsMC* StatisticsMean::clone() const
 {
 	return new StatisticsMean(*this);
 }
+/*
 std::string StatisticsMean::toString() const
 {
 	return 0;
 }
+*/
